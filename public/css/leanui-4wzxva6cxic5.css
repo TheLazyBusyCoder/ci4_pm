@@ -1,0 +1,113 @@
+:root {
+    --border-color: #2a2a2a;
+    --bg-main: #1a1a1a;
+    --bg-header: #1e1e1e;
+    --bg-toolbar: #1e1e1e;
+    --bg-table: #1a1a1a;
+    --text-primary: #e0e0e0;
+    --text-muted: #888;
+    --accent-color: #3b82f6;
+    --focus-color: #3b82f6;
+    --success-color: #22c55e;
+    --error-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #3b82f6;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.l-body-4wzxva6cxic5 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-size: 13px;
+    width: 999px;
+    margin: 0 auto;
+}
+.l-menu-4wzxva6cxic5 {
+    height: 28px;
+    background: var(--bg-menu);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.l-menu-item-4wzxva6cxic5 {
+    padding: 2px 6px;
+    cursor: pointer;
+    position: relative;
+}
+.l-menu-item-4wzxva6cxic5:hover {
+    background: var(--bg-toolbar);
+}
+.l-menu-item-4wzxva6cxic5.active-4wzxva6cxic5 {
+    background: var(--bg-toolbar);
+}
+.l-submenu-4wzxva6cxic5 {
+    display: none;
+    position: absolute;
+    top: 28px;
+    background: var(--bg-toolbar);
+    border: 1px solid var(--border-color);
+    min-width: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.l-submenu-4wzxva6cxic5.show-4wzxva6cxic5 {
+    display: block;
+}
+.l-submenu-item-4wzxva6cxic5 {
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.l-submenu-item-4wzxva6cxic5 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+.l-submenu-item-4wzxva6cxic5:hover {
+    background: var(--accent-color);
+}
+.l-submenu-separator-4wzxva6cxic5 {
+    height: 1px;
+    background: var(--border-color);
+    margin: 2px 0;
+}
+.l-submenu-4wzxva6cxic5::-webkit-scrollbar {
+    width: 8px;
+}
+.l-submenu-4wzxva6cxic5::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+.l-submenu-4wzxva6cxic5::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+}
+.l-navbar-4wzxva6cxic5 {
+    height: 40px;
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-navbar-actions-4wzxva6cxic5 {
+    display: flex;
+    gap: 6px;
+}
+.l-btn-4wzxva6cxic5 {
+    background: var(--bg-menu);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.l-container-4wzxva6cxic5 {
+    background: var(--bg-nav);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+}

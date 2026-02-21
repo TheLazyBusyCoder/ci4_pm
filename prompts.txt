@@ -1,0 +1,6 @@
+my web app in codeigniter 4 is for manager to see what their employees are doing etc. its not a sas project i am gonna give this to a compay to use it. 
+now there can be multiple managers and  under that manager multiple employees can be there. 
+there will be 1 admin which can add people in the system. 
+now the web app is simple just manager giving task to employees , employees adding updates to the task and updating the status. thats it. 
+
+project name: themanagers

@@ -1,0 +1,52 @@
+{
+    "tables": [
+        {
+            "name": "users",
+            "cols": {
+                "name": "string|required",
+                "email": "string|unique|required",
+                "password": "string|required",
+                "role": "enum(admin,manager,employee)|required|default:employee",
+                "is_active": "boolean|default:true",
+                "last_login": "datetime|nullable"
+            },
+            "rel": {
+                "m-1": ["managers"]
+            }
+        },
+        {
+            "name": "managers",
+            "cols": {
+                "department": "string|nullable",
+                "notes": "text|nullable"
+            },
+            "rel": {
+                "1-1": ["users"]
+            }
+        },
+        {
+            "name": "tasks",
+            "cols": {
+                "title": "string|required",
+                "description": "text|nullable",
+                "status": "enum(pending,in_progress,completed,cancelled)|default:pending",
+                "priority": "enum(low,medium,high)|default:medium",
+                "due_date": "date|nullable",
+                "completed_at": "datetime|nullable"
+            },
+            "rel": {
+                "m-1": ["users", "managers"]
+            }
+        },
+        {
+            "name": "task_updates",
+            "cols": {
+                "message": "text|required",
+                "status_changed_to": "enum(pending,in_progress,completed,cancelled)|nullable"
+            },
+            "rel": {
+                "m-1": ["tasks", "users"]
+            }
+        }
+    ]
+}
