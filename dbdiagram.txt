@@ -1,0 +1,85 @@
+Table users {
+  id bigint [pk, increment]
+  name varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  password varchar(255) [not null]
+  role enum('admin', 'manager', 'employee') [not null]
+  is_active boolean [default: 1]
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table teams {
+  id bigint [pk, increment]
+  name varchar(255) [not null]
+  description text
+  user_id bigint
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table team_members {
+  id bigint [pk, increment]
+  joined_at date
+  team_id bigint
+  user_id bigint
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table tasks {
+  id bigint [pk, increment]
+  title varchar(255) [not null]
+  description text
+  status enum('pending', 'in_progress', 'completed') [default: 'pending']
+  priority enum('low', 'medium', 'high') [default: 'medium']
+  due_date datetime
+  completed_at datetime
+  team_id bigint
+  assignee_id bigint
+  assignee_type varchar(255)
+  creator_id bigint
+  creator_type varchar(255)
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+
+  indexes {
+    (assignee_id, assignee_type) [name: "tasks_assignee_morph_index"]
+    (creator_id, creator_type) [name: "tasks_creator_morph_index"]
+  }
+}
+
+Table task_assignments {
+  id bigint [pk, increment]
+  task_id bigint
+  user_id bigint
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table comments {
+  id bigint [pk, increment]
+  body text [not null]
+  edited_at datetime
+  parent_id bigint
+  task_id bigint
+  user_id bigint
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+/* Relationships */
+
+Ref: teams.user_id > users.id [delete: cascade]
+
+Ref: team_members.team_id > teams.id [delete: cascade]
+Ref: team_members.user_id > users.id [delete: cascade]
+
+Ref: tasks.team_id > teams.id [delete: cascade]
+
+Ref: task_assignments.task_id > tasks.id [delete: cascade]
+Ref: task_assignments.user_id > users.id [delete: cascade]
+
+Ref: comments.parent_id > comments.id [delete: set null]
+Ref: comments.task_id > tasks.id [delete: cascade]
+Ref: comments.user_id > users.id [delete: cascade]
