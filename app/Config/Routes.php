@@ -54,6 +54,8 @@ $routes->group('admin' , ['filter' => ['admin' , 'auth']], function($routes) {
 });
 $routes->group('manager' , ['filter' => ['manager' , 'auth']], function($routes) {
     $routes->get('dashboard' , [ManagerController::class , 'dashboard']);
+    $routes->get('teams' , [ManagerController::class , 'teamsListing']);
+    $routes->get('teams/(:num)' , [ManagerController::class , 'teamsView/$1']);
 });
 
 

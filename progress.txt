@@ -1,0 +1,3 @@
+
+
+manager can see teams he is in , create task for the team. 

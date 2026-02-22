@@ -344,7 +344,7 @@ class AuthController extends BaseController
     {
         return match ($role) {
             'admin'   => '/admin/dashboard',
-            'manager' => '/manager/dashboard',
+            'manager' => '/manager/teams',
             default   => '/employee/dashboard',
         };
     }

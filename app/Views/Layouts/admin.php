@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LeanUI Framework</title>
+    <title>Admin</title>
     <style>
         :root {
             --border-color: #2a2a2a;
@@ -128,6 +128,17 @@
         <div class="l-menu-item-j0b5g5zms1bm" data-menu="users">User Management</div>
         <div class="l-menu-item-j0b5g5zms1bm" data-menu="teams">Team Management</div>
         <div class="l-menu-item-j0b5g5zms1bm" data-menu="tasks">Task Monitoring</div>
+        <div class="l-menu-item-j0b5g5zms1bm" data-menu="more">More</div>
+    </div>
+    <div class="l-submenu-j0b5g5zms1bm" id="l-submenu-more-j0b5g5zms1bm">
+        <div class="l-submenu-item-j0b5g5zms1bm">
+            <form action="/auth/logout" method="post" style="margin:0;">
+                <?= csrf_field() ?>
+                <button type="submit" style="all: unset; cursor: pointer;">
+                    Logout
+                </button>
+            </form>
+        </div>
     </div>
     <div class="l-submenu-j0b5g5zms1bm" id="l-submenu-users-j0b5g5zms1bm">
         <div class="l-submenu-item-j0b5g5zms1bm"><a href="/admin/users">All Users</a></div>
