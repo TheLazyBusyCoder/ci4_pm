@@ -3,71 +3,73 @@
 <?= $this->section('css') ?>
 <!-- form -->
 <style>
-    .l-form-d90s6rmg2rjt {
+    .l-form-t50y8iv17088 {
         background-color: var(--bg-nav);
-        max-width: 300px;
+        padding: 20px;
+        border: 1px solid var(--border-color);
     }
-    .l-section-title-d90s6rmg2rjt {
+    .l-section-title-t50y8iv17088 {
         font-size: 14px;
         font-weight: 600;
         margin: 16px 0 10px 0;
         padding-bottom: 6px;
         border-bottom: 1px solid var(--border-color);
     }
-    .l-section-title-d90s6rmg2rjt:first-child {
+    .l-section-title-t50y8iv17088:first-child {
         margin-top: 0;
     }
-    .l-field-d90s6rmg2rjt {
+    .l-field-t50y8iv17088 {
         margin-bottom: 10px;
     }
-    .l-field-row-d90s6rmg2rjt,
-    .l-field-grid-d90s6rmg2rjt {
+    .l-field-row-t50y8iv17088,
+    .l-field-grid-t50y8iv17088 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         margin-bottom: 10px;
     }
-    .l-label-d90s6rmg2rjt {
+    .l-label-t50y8iv17088 {
         display: block;
         font-size: 12px;
         font-weight: 500;
         margin-bottom: 4px;
     }
-    .l-required-d90s6rmg2rjt {
+    .l-required-t50y8iv17088 {
         color: var(--error-color);
     }
-    .l-input-d90s6rmg2rjt,
-    .l-select-d90s6rmg2rjt,
-    .l-select-d90s6rmg2rjt option,
-    .l-textarea-d90s6rmg2rjt {
+    .l-input-t50y8iv17088,
+    .l-select-t50y8iv17088,
+    .l-textarea-t50y8iv17088 {
         width: 100%;
         height: 28px;
         padding: 4px 8px;
         font-size: 13px;
         font-family: inherit;
+        color: var(--text-primary);
+        background-color: var(--bg-menu);
         border: 1px solid var(--border-color);
         outline: none;
     }
-    .l-input-d90s6rmg2rjt:focus,
-    .l-select-d90s6rmg2rjt:focus,
-    .l-textarea-d90s6rmg2rjt:focus {
+    .l-input-t50y8iv17088:focus,
+    .l-select-t50y8iv17088:focus,
+    .l-textarea-t50y8iv17088:focus {
         border-color: var(--focus-color);
     }
-    .l-input-d90s6rmg2rjt:disabled,
-    .l-select-d90s6rmg2rjt:disabled,
-    .l-textarea-d90s6rmg2rjt:disabled {
+    .l-input-t50y8iv17088:disabled,
+    .l-select-t50y8iv17088:disabled,
+    .l-textarea-t50y8iv17088:disabled {
         opacity: 0.5;
         cursor: not-allowed;
     }
-    .l-input-d90s6rmg2rjt:read-only {
+    .l-input-t50y8iv17088:read-only {
         opacity: 0.7;
     }
-    .l-field-d90s6rmg2rjt.l-field-error-d90s6rmg2rjt .l-input-d90s6rmg2rjt,
-    .l-field-d90s6rmg2rjt.l-field-error-d90s6rmg2rjt .l-select-d90s6rmg2rjt,
-    .l-field-d90s6rmg2rjt.l-field-error-d90s6rmg2rjt .l-textarea-d90s6rmg2rjt {
+    .l-field-t50y8iv17088.l-field-error-t50y8iv17088 .l-input-t50y8iv17088,
+    .l-field-t50y8iv17088.l-field-error-t50y8iv17088 .l-select-t50y8iv17088,
+    .l-field-t50y8iv17088.l-field-error-t50y8iv17088 .l-textarea-t50y8iv17088 {
         border-color: var(--error-color);
     }
-    .l-select-d90s6rmg2rjt {
+    .l-select-t50y8iv17088 {
         cursor: pointer;
         padding-right: 24px;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23e0e0e0' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
@@ -75,41 +77,41 @@
         background-position: right 8px center;
         appearance: none;
     }
-    .l-select-d90s6rmg2rjt[multiple] {
+    .l-select-t50y8iv17088[multiple] {
         height: auto;
         background-image: none;
     }
-    .l-textarea-d90s6rmg2rjt {
+    .l-textarea-t50y8iv17088 {
         height: auto;
         resize: vertical;
         min-height: 60px;
     }
-    .l-radio-group-d90s6rmg2rjt {
+    .l-radio-group-t50y8iv17088 {
         display: flex;
         gap: 12px;
     }
-    .l-radio-d90s6rmg2rjt,
-    .l-checkbox-d90s6rmg2rjt {
+    .l-radio-t50y8iv17088,
+    .l-checkbox-t50y8iv17088 {
         display: inline-flex;
         align-items: center;
         cursor: pointer;
         font-size: 13px;
         margin-bottom: 6px;
     }
-    .l-radio-d90s6rmg2rjt input,
-    .l-checkbox-d90s6rmg2rjt input {
+    .l-radio-t50y8iv17088 input,
+    .l-checkbox-t50y8iv17088 input {
         margin: 0 6px 0 0;
         cursor: pointer;
     }
-    .l-toggle-d90s6rmg2rjt {
+    .l-toggle-t50y8iv17088 {
         display: inline-flex;
         align-items: center;
         cursor: pointer;
     }
-    .l-toggle-d90s6rmg2rjt input {
+    .l-toggle-t50y8iv17088 input {
         display: none;
     }
-    .l-toggle-slider-d90s6rmg2rjt {
+    .l-toggle-slider-t50y8iv17088 {
         position: relative;
         width: 36px;
         height: 18px;
@@ -117,7 +119,7 @@
         border-radius: 9px;
         transition: background-color 0.2s;
     }
-    .l-toggle-slider-d90s6rmg2rjt::before {
+    .l-toggle-slider-t50y8iv17088::before {
         content: "";
         position: absolute;
         width: 14px;
@@ -128,20 +130,20 @@
         border-radius: 50%;
         transition: transform 0.2s;
     }
-    .l-toggle-d90s6rmg2rjt input:checked + .l-toggle-slider-d90s6rmg2rjt {
+    .l-toggle-t50y8iv17088 input:checked + .l-toggle-slider-t50y8iv17088 {
         background-color: var(--focus-color);
     }
-    .l-toggle-d90s6rmg2rjt input:checked + .l-toggle-slider-d90s6rmg2rjt::before {
+    .l-toggle-t50y8iv17088 input:checked + .l-toggle-slider-t50y8iv17088::before {
         transform: translateX(18px);
     }
-    .l-toggle-label-d90s6rmg2rjt {
+    .l-toggle-label-t50y8iv17088 {
         margin-left: 8px;
     }
-    .l-file-d90s6rmg2rjt {
+    .l-file-t50y8iv17088 {
         font-size: 13px;
         color: var(--text-primary);
     }
-    .l-file-d90s6rmg2rjt::file-selector-button {
+    .l-file-t50y8iv17088::file-selector-button {
         padding: 4px 10px;
         font-size: 13px;
         font-family: inherit;
@@ -151,7 +153,7 @@
         cursor: pointer;
         margin-right: 8px;
     }
-    .l-color-d90s6rmg2rjt {
+    .l-color-t50y8iv17088 {
         width: 50px;
         height: 28px;
         padding: 2px;
@@ -159,7 +161,7 @@
         background-color: var(--bg-menu);
         cursor: pointer;
     }
-    .l-range-d90s6rmg2rjt {
+    .l-range-t50y8iv17088 {
         width: 100%;
         height: 4px;
         background-color: var(--border-color);
@@ -167,7 +169,7 @@
         cursor: pointer;
         appearance: none;
     }
-    .l-range-d90s6rmg2rjt::-webkit-slider-thumb {
+    .l-range-t50y8iv17088::-webkit-slider-thumb {
         width: 14px;
         height: 14px;
         background-color: var(--focus-color);
@@ -175,7 +177,7 @@
         cursor: pointer;
         appearance: none;
     }
-    .l-range-d90s6rmg2rjt::-moz-range-thumb {
+    .l-range-t50y8iv17088::-moz-range-thumb {
         width: 14px;
         height: 14px;
         background-color: var(--focus-color);
@@ -183,32 +185,32 @@
         cursor: pointer;
         border: none;
     }
-    .l-help-d90s6rmg2rjt {
+    .l-help-t50y8iv17088 {
         font-size: 11px;
         color: #999;
         margin-top: 3px;
         display: none;
     }
-    .l-field-d90s6rmg2rjt .l-help-d90s6rmg2rjt {
+    .l-field-t50y8iv17088 .l-help-t50y8iv17088 {
         display: block;
     }
-    .l-error-d90s6rmg2rjt {
+    .l-error-t50y8iv17088 {
         font-size: 11px;
         color: var(--error-color);
         margin-top: 3px;
         display: none;
     }
-    .l-field-d90s6rmg2rjt.l-field-error-d90s6rmg2rjt .l-error-d90s6rmg2rjt {
+    .l-field-t50y8iv17088.l-field-error-t50y8iv17088 .l-error-t50y8iv17088 {
         display: block;
     }
-    .l-form-actions-d90s6rmg2rjt {
+    .l-form-actions-t50y8iv17088 {
         margin-top: 16px;
         padding-top: 16px;
         border-top: 1px solid var(--border-color);
         display: flex;
         gap: 8px;
     }
-    .l-btn-d90s6rmg2rjt {
+    .l-btn-t50y8iv17088 {
         padding: 6px 16px;
         font-size: 13px;
         font-family: inherit;
@@ -216,12 +218,12 @@
         border: 1px solid var(--border-color);
         cursor: pointer;
     }
-    .l-btn-primary-d90s6rmg2rjt {
+    .l-btn-primary-t50y8iv17088 {
         background-color: var(--focus-color);
         color: white;
         border-color: var(--focus-color);
     }
-    .l-btn-secondary-d90s6rmg2rjt {
+    .l-btn-secondary-t50y8iv17088 {
         background-color: var(--bg-menu);
         color: var(--text-primary);
     }    
@@ -563,7 +565,7 @@
         color: var(--error-color);
     }
 
-    .l-toast-o3rq5doqn23p.l-message-warning-o3rq5doqn23p{
+    .l-toast-o3rq5doqn23p.l-message-warning-o3rq5doqn23p {
         border-left-color: var(--warning-color);
     }
 
@@ -585,7 +587,7 @@
 
     .l-toast-o3rq5doqn23p.l-message-info-o3rq5doqn23p .l-message-title-o3rq5doqn23p {
         color: var(--info-color);
-    }        
+    }
 </style>
 <?= $this->endSection() ?>
 
@@ -610,72 +612,46 @@
         <button class="l-message-close-o3rq5doqn23p">×</button>
     </div>
 <?php endif; ?>
-<form autocomplete="off" class="l-form-d90s6rmg2rjt" action="/admin/users/create" method="post">
-    <?php csrf_field() ?>
-    <div class="l-section-title-d90s6rmg2rjt">
-        Create team
-    </div>
-    <div class="l-field-d90s6rmg2rjt">
-        <label class="l-label-d90s6rmg2rjt">Team name
-            <span class="l-required-d90s6rmg2rjt">*</span></label>
-        <div class="l-control-d90s6rmg2rjt">
+<form method="post" action="/admin/teams/create" class="l-form-t50y8iv17088">
+    <?php csrf_token() ?>
+    <div class="l-section-title-t50y8iv17088">Team Information</div>
+    <div class="l-field-t50y8iv17088">
+        <label class="l-label-t50y8iv17088">Team Name
+            <span class="l-required-t50y8iv17088">*</span></label>
+        <div class="l-control-t50y8iv17088">
             <input
                 type="text"
-                class="l-input-d90s6rmg2rjt"
+                class="l-input-t50y8iv17088"
                 name="name"
                 required />
         </div>
-        <div class="l-help-d90s6rmg2rjt">
-            Enter your team name
+        <div class="l-help-t50y8iv17088">
+            Enter a unique and descriptive name for the team
         </div>
     </div>
-    <div class="l-field-d90s6rmg2rjt">
-        <label class="l-label-d90s6rmg2rjt">Email Address
-            <span class="l-required-d90s6rmg2rjt">*</span></label>
-        <div class="l-control-d90s6rmg2rjt">
-            <input
-                type="email"
-                class="l-input-d90s6rmg2rjt"
-                autocomplete="off"
-                name="email"
-                required />
+    <div class="l-field-t50y8iv17088">
+        <label class="l-label-t50y8iv17088">Description </label>
+        <div class="l-control-t50y8iv17088">
+            <textarea
+                class="l-textarea-t50y8iv17088"
+                name="description"
+                rows="4"></textarea>
+        </div>
+        <div class="l-help-t50y8iv17088">
+            Optional short description about the team's purpose
         </div>
     </div>
-    <div class="l-field-d90s6rmg2rjt">
-        <label class="l-label-d90s6rmg2rjt">Password
-            <span class="l-required-d90s6rmg2rjt">*</span></label>
-        <div class="l-control-d90s6rmg2rjt">
-            <input
-                type="password"
-                class="l-input-d90s6rmg2rjt"
-                name="password"
-                autocomplete="off"
-                required />
-        </div>
-        <div class="l-help-d90s6rmg2rjt">
-            Must be at least 8 characters
-        </div>
-    </div>
-    <div class="l-section-title-d90s6rmg2rjt">Role & Status</div>
-    <div class="l-field-d90s6rmg2rjt">
-        <label class="l-label-d90s6rmg2rjt">User Role
-            <span class="l-required-d90s6rmg2rjt">*</span></label>
-        <div class="l-control-d90s6rmg2rjt">
-            <select
-                class="l-select-d90s6rmg2rjt"
-                name="role"
-                required>
-                <option value="">Select an option</option>
-                <option value="manager">Manager</option>
-                <option value="employee">Employee</option>
-            </select>
-        </div>
-    </div>
-    <div class="l-form-actions-d90s6rmg2rjt">
+
+    <div class="l-form-actions-t50y8iv17088">
         <button
             type="submit"
-            class="l-btn-d90s6rmg2rjt l-btn-primary-d90s6rmg2rjt">
+            class="l-btn-t50y8iv17088 l-btn-primary-t50y8iv17088">
             Submit
+        </button>
+        <button
+            type="button"
+            class="l-btn-t50y8iv17088 l-btn-secondary-t50y8iv17088">
+            Cancel
         </button>
     </div>
 </form>
@@ -697,24 +673,24 @@
 
     function showToast(type, title, text) {
         const container = document.getElementById('toastContainer-o3rq5doqn23p');
-        
+
         const toast = document.createElement('div');
         toast.className = 'l-toast-o3rq5doqn23p l-message-' + type + '-o3rq5doqn23p';
-        
+
         const icon = document.createElement('div');
         icon.className = 'l-message-icon-o3rq5doqn23p';
-        
+
         const content = document.createElement('div');
         content.className = 'l-message-content-o3rq5doqn23p';
-        
+
         const titleEl = document.createElement('div');
         titleEl.className = 'l-message-title-o3rq5doqn23p';
         titleEl.textContent = title;
-        
+
         const textEl = document.createElement('div');
         textEl.className = 'l-message-text-o3rq5doqn23p';
         textEl.textContent = text;
-        
+
         const closeBtn = document.createElement('button');
         closeBtn.className = 'l-message-close-o3rq5doqn23p';
         closeBtn.textContent = '×';
@@ -724,20 +700,20 @@
                 toast.remove();
             }, 200);
         });
-        
+
         content.appendChild(titleEl);
         content.appendChild(textEl);
-        
+
         toast.appendChild(icon);
         toast.appendChild(content);
         toast.appendChild(closeBtn);
-        
+
         container.appendChild(toast);
-        
+
         setTimeout(function() {
             toast.classList.add('l-toast-show-o3rq5doqn23p');
         }, 10);
-        
+
         setTimeout(function() {
             toast.style.opacity = '0';
             setTimeout(function() {

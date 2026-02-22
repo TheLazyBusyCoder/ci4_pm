@@ -46,6 +46,11 @@ $routes->group('admin' , ['filter' => ['admin' , 'auth']], function($routes) {
 
     $routes->get('teams', [AdminController::class ,'teamsListing']);
     $routes->get('teams/create', [AdminController::class ,'createTeamForm']);
+    $routes->post('teams/create', [AdminController::class ,'createTeamStore']);
+
+    $routes->get('teams/members/(:num)' , [AdminController::class ,'teamMembers/$1']);
+    $routes->post('teams/members/(:num)/add/' , [AdminController::class ,'teamMembersAdd/$1']);
+
 });
 $routes->group('manager' , ['filter' => ['manager' , 'auth']], function($routes) {
     $routes->get('dashboard' , [ManagerController::class , 'dashboard']);

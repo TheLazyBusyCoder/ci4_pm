@@ -138,7 +138,6 @@
         <div class="l-submenu-item-j0b5g5zms1bm"><a href="/admin/teams">Teams</a></div>
         <div class="l-submenu-item-j0b5g5zms1bm"><a href="/admin/teams/create">Create Teams</a></div>
         <div class="l-submenu-separator-j0b5g5zms1bm"></div>
-        <div class="l-submenu-item-j0b5g5zms1bm"><a href="/admin/teams/assign-members">Assign members to team</a></div>
     </div>
     <div class="l-submenu-j0b5g5zms1bm" id="l-submenu-tasks-j0b5g5zms1bm">
         <div class="l-submenu-item-j0b5g5zms1bm"><a href="/admin/tasks">All Tasks</a></div>
