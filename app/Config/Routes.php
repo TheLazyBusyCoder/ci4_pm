@@ -1,5 +1,7 @@
 <?php
 
+use App\Controllers\AdminController;
+use App\Controllers\ManagerController;
 use CodeIgniter\Router\RouteCollection;
 use App\Controllers\AuthController;
 
@@ -23,8 +25,6 @@ POST   /auth/reset-password
 $routes->group('auth', ['filter' => 'guest'], function ($routes) {
     $routes->get('login',                        [AuthController::class, 'loginView']);
     $routes->post('login',                       [AuthController::class, 'login']);
-    $routes->get('register',                     [AuthController::class, 'registerView']);
-    $routes->post('register',                    [AuthController::class, 'register']);
     $routes->get('forgot-password',              [AuthController::class, 'forgotPasswordView']);
     $routes->post('forgot-password',             [AuthController::class, 'forgotPassword']);
     $routes->get('reset-password/(:segment)',    [AuthController::class, 'resetPasswordView/$1']);
@@ -35,84 +35,20 @@ $routes->group('auth', ['filter' => 'guest'], function ($routes) {
 $routes->group('auth', ['filter' => 'auth'], function ($routes) {
     $routes->post('logout',        [AuthController::class, 'logout']);
     $routes->post('refresh-token', [AuthController::class, 'refreshToken']);
-    $routes->get('me',             [AuthController::class, 'me']);
+    $routes->get('me',             [AuthController::class, 'me']); 
 });
 
-// Users
-/*
-GET    /users                // list users (admin/manager)
-POST   /users                // create user
-GET    /users/{id}           // get user
-PUT    /users/{id}           // update user
-PATCH  /users/{id}/status    // activate/deactivate
-DELETE /users/{id}           // delete user
+$routes->group('admin' , ['filter' => ['admin' , 'auth']], function($routes) {
+    $routes->get('dashboard' , [AdminController::class , 'dashboard']);
+    $routes->get('users/create' , [AdminController::class ,'createUserForm']);
+    $routes->post('users/create' , [AdminController::class ,'createUserStore']);
+    $routes->get('users' , [AdminController::class ,'usersListing']);
 
-Optional
-GET    /users/{id}/teams
-GET    /users/{id}/tasks
-GET    /users/{id}/comments
-*/
-
-
-// Teams
-/*
-GET    /teams
-POST   /teams
-GET    /teams/{id}
-PUT    /teams/{id}
-DELETE /teams/{id}
-
-GET    /teams/{id}/members
-POST   /teams/{id}/members
-DELETE /teams/{id}/members/{userId}
-GET    /teams/{id}/tasks
-POST   /teams/{id}/tasks
-*/
-
-// Tasks
-/*
-GET    /tasks
-POST   /tasks
-GET    /tasks/{id}
-PUT    /tasks/{id}
-DELETE /tasks/{id}
-
-PATCH  /tasks/{id}/status
-PATCH  /tasks/{id}/priority
-PATCH  /tasks/{id}/complete
-PATCH  /tasks/{id}/assign
-PATCH  /tasks/{id}/unassign
-
-Filtering routes
-GET /tasks?status=pending
-GET /tasks?priority=high
-GET /tasks?team_id=1
-GET /tasks?assignee_id=5
-GET /tasks?due_today=true
-
-*/
-
-
-// Task Assignments
-/*
-POST   /tasks/{id}/assignees
-DELETE /tasks/{id}/assignees/{userId}
-GET    /tasks/{id}/assignees
-*/
-
-// Comments
-/*
-GET    /tasks/{taskId}/comments
-POST   /tasks/{taskId}/comments
-GET    /comments/{id}
-PUT    /comments/{id}
-DELETE /comments/{id}
-
-POST   /comments/{id}/reply
-GET    /comments/{id}/replies
-*/
-
-
-
+    $routes->get('teams', [AdminController::class ,'teamsListing']);
+    $routes->get('teams/create', [AdminController::class ,'createTeamForm']);
+});
+$routes->group('manager' , ['filter' => ['manager' , 'auth']], function($routes) {
+    $routes->get('dashboard' , [ManagerController::class , 'dashboard']);
+});
 
 

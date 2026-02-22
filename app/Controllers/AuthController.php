@@ -167,7 +167,6 @@ class AuthController extends BaseController
 
     public function logout(): RedirectResponse
     {
-        delete_cookie('remember_token');
         session()->destroy();
 
         return redirect()->to('/auth/login')

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LeanUI Framework</title>
+    <title>Manager</title>
     <link rel="stylesheet" href="leanui-4wzxva6cxic5.css">
 </head>
 

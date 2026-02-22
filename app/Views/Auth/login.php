@@ -629,9 +629,7 @@
     <!-- message -->
     <?php if ($error = session()->getFlashdata('error')): ?>
         <div class="l-message-o3rq5doqn23p l-message-error-o3rq5doqn23p l-message-dismissible-o3rq5doqn23p">
-            <div class="l-message-icon-o3rq5doqn23p"></div>
             <div class="l-message-content-o3rq5doqn23p">
-                <div class="l-message-title-o3rq5doqn23p">Error</div>
                 <div class="l-message-text-o3rq5doqn23p">
                     <?= $error ?>
                 </div>
